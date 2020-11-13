@@ -1,4 +1,5 @@
 import * as puppeteer from 'puppeteer';
+import CarData from './CarData';
 
 export default class RegoScraper {
     private reData = /<dl class="data">(.*)<\/dl>/gs
@@ -93,23 +94,5 @@ export default class RegoScraper {
 
     public async Close() {
         await this.browser.close();
-    }
-}
-
-class CarData {
-    public RegistrationNumber: string;
-    public VIN: string;
-    public Description: string;
-    public Purpose: string;
-    public Status: string;
-    public Expiry: string;
-
-    constructor(registrationNumber: string, vin: string, description: string, purpose: string, status: string, expiry: string) {
-        this.RegistrationNumber = registrationNumber;
-        this.VIN = vin;
-        this.Description = description;
-        this.Purpose = purpose;
-        this.Status = status;
-        this.Expiry = expiry;
     }
 }

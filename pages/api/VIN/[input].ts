@@ -1,4 +1,4 @@
-import RegoScraper from '../../../RegoScraper';
+import RegoScraper from '../../../RegoScraper/RegoScraper';
 
 export default function VIN(req, res) {
 	const {
